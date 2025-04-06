@@ -1,2 +1,5 @@
 FLASK_APP=sayhello
 FLASK_ENV=development
+FLASK_RUN_PORT=8000
+FLASK_RUN_HOST=localhost
+FLASK_DEBUG=1
