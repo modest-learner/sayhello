@@ -29,10 +29,16 @@ def forge(count):
     """Generate fake messages."""
     from faker import Faker
 
-    db.drop_all()
-    db.create_all()
+    # db.drop_all()
+    # db.create_all()
+    # messages = Message.query.all()
+    # for message in messages:
+    #     db.session.delete(message)
+    # db.session.commit()
+    Message.query.delete()
+    click.echo("delete over...")
 
-    fake = Faker()
+    fake = Faker('zh-cn')
     click.echo('Working...')
 
     for i in range(count):
